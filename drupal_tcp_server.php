@@ -51,10 +51,13 @@ class MySocketServer
               echo "$ip\tconnection closed\t$time\n";
               continue;
             }
-            $buffer = ereg_replace("[\n\r]","", $buffer) . "\0";
+            $buffer = ereg_replace("[\n\r]", "", $buffer);
             echo "$ip\tNew message received : $buffer\t$time\n";
+            $buffer = json_decode($buffer);
+            extract((array)$buffer);
             // Call Drupal function.
-            $talkback = drupal_to_js(node_load(1));
+            $output = call_user_func_array($function, $argument);
+            $talkback = drupal_to_js($output);
             $this->sendMessage($socket, $talkback);
           }
         }

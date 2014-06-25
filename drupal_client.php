@@ -1,6 +1,7 @@
 <?php
 function drupal_client_result($socket, $function, $argument) {
-$message = $function;
+// Send json encoded message.
+$message = json_encode(array('function' => $function, 'argument' => $argument)) . "\n";
 // send string to server
 socket_write($socket, $message, strlen($message)) or die("Could not send data to server\n");
 // get server response
