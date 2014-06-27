@@ -92,7 +92,7 @@ class MySocketServer
     }
 }
 
-require_once('drupal_config.php');
+require_once(dirname(__FILE__) . '/drupal_config.php');
 
 $myServer = new MySocketServer();
 $myServer->run();
