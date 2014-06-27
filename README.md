@@ -31,10 +31,12 @@ Total connection : 315
 Total elapsed time : 1.775 sec
 
 ### Usage
-Copy the **drupald** file inside /etc/init.d and use the command bellow
+Copy the **drupald** file inside /etc/init.d and use the command bellow to start drupal tcp server
 
 $ service drupald start
 
 $ service drupald stop
 
 $ service drupald restart
+
+Now in your client side code, include **drupal_client.php** and follow sample.php to start with.
