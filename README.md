@@ -23,6 +23,7 @@ Total elapsed time : 1.775 sec
 
 ### Usage
 Copy the **drupald** file inside /etc/init.d and use the command bellow
+
 $ service drupald start
 $ service drupald stop
 $ service drupald restart
