@@ -1,7 +1,7 @@
 Drupal TCP Server
 =================
 
-Drupal TCP Server is a PHP based simple TCP socket server running on port 9000. The server is very light weight and interestingly Bootstrap ontime only. So this means no bootstrap for any incoming request.
+Drupal TCP Server is a PHP based simple TCP socket server running on port 9000. The server is very light weight and interestingly bootstrap one time only. So this means **no bootstrap** for any incoming request.
 
 After running the service, any one can call any Drupal function in json in bellow format:
 
